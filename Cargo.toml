@@ -1,0 +1,36 @@
+[package]
+name = "convoforge"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [".", "entity", "migration"]
+
+[dependencies]
+entity = { path = "entity" }
+migration = { path = "migration" }
+actix = "0.13.5"
+actix-web = "4.8.0"
+serde = { version = "1.0.204", features = ["derive"] }
+actix-web-actors = "4.3.0"
+env_logger = "0.11.3"
+log = "0.4.22"
+dotenv = "0.15.0"
+chrono = "0.4.38"
+jsonwebtoken = "9.3.0"
+lazy_static = "1.5.0"
+actix-web-lab = "0.21.0"
+serde_json = "1.0.121"
+sea-orm = "1.0.0"
+aws-config = "1.5.4"
+aws-sdk-s3 = { version = "1.42.0", features = ["behavior-version-latest"]}
+actix-multipart = "0.7.2"
+tokio = "1.39.2"
+reqwest = "0.12.5"
+aws-smithy-runtime = "1.6.2"
+hyper-rustls = { version = "0.24.2", features = ["webpki-roots"] }
+rustls = "0.21.12"
+webpki-roots = "0.25.4"
+rand = "0.8.5"
+actix-cors = "0.7.0"
+uuid = { version = "1.10.0", features = ["serde", "v4"] }

@@ -1,0 +1,69 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# Rust dependencies
+/Cargo.lock
+/.cargo/
+
+# Binaries
+*.exe
+*.so
+*.dylib
+*.dll
+
+# Various IDEs and editors
+# IntelliJ
+.idea/
+*.iml
+# Visual Studio Code
+.vscode/
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+# Eclipse
+.project
+.cproject
+.settings/
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Byebug command history
+.byebug_history
+
+# VS Code directories
+.history/
+*.code-search
+.vscode-test/
+
+# Local configuration files
+.env
+.env.*.local
+
+# Optional IntelliJ IDEA plugins
+.idea_modules/
+
+# Output of the cargo package
+Cargo.pkg
+
+# Migration target directory
+/migration/target/
+/migration/Cargo.lock

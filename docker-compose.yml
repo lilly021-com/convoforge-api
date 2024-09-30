@@ -1,0 +1,41 @@
+version: "3.4"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL=
+      - CLIENT_SECRET=
+      - JWT_SECRET=
+      - AWS_S3_BUCKET_NAME=
+      - AWS_REGION=
+      - AWS_ACCESS_KEY_ID=
+      - AWS_SECRET_ACCESS_KEY=
+    ports:
+      - "8080:8080"
+    networks:
+      - net_users
+    depends_on:
+      - postgres
+    links:
+      - postgres
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: CHANGE_ME
+      POSTGRES_PASSWORD: CHANGE_ME
+    ports:
+      - "5432:5432"
+    networks:
+      - net_users
+    volumes:
+      - postgres_data_convoforge:/var/lib/postgresql/data
+
+networks:
+  net_users:
+    driver: bridge
+volumes:
+  postgres_data_convoforge: {}

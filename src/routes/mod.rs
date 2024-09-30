@@ -1,0 +1,15 @@
+pub mod auth_routes;
+pub(crate) mod channel_role_access_routes;
+pub(crate) mod channel_routes;
+pub(crate) mod chat_routes;
+pub(crate) mod flag_routes;
+pub mod handlers;
+pub(crate) mod media_routes;
+pub(crate) mod message_routes;
+pub(crate) mod organization_routes;
+pub(crate) mod presence_routes;
+pub(crate) mod role_routes;
+pub(crate) mod seen_message_routes;
+pub(crate) mod user_channel_view_routes;
+pub(crate) mod user_role_access_routes;
+pub(crate) mod user_routes;
